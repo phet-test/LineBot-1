@@ -216,13 +216,13 @@ class LINE extends LineAPI {
 
         if(txt == 'sp') {
             const curTime = (Date.now() / 100000);
-            await this._sendMessage(seq,'proses say');
+            await this._sendMessage(seq,'processing...');
             const rtime = (Date.now() / 100000) - curTime;
             await this._sendMessage(seq, `${rtime} second`);
         }
 
         if(txt == 'bye' && isAdminOrBot(seq.from)) { //untuk left dari group atau spam group contoh left <alfath>
-              this._sendMessage(seq, `Papay Semua`);
+              this._sendMessage(seq, `Good bye..`);
               this._leaveGroup(seq.to);
             }
 
@@ -232,7 +232,7 @@ class LINE extends LineAPI {
             })
         }
 
-        if(txt === 'salken' && this.stateStatus.kick == 1 && isAdminOrBot(seq.from)) {
+        if(txt === 'kickall' && this.stateStatus.kick == 1 && isAdminOrBot(seq.from)) {
             let { listMember } = await this.searchGroup(seq.to);
             for (var i = 0; i < listMember.length; i++) {
                 if(!isAdminOrBot(listMember[i].mid)){
@@ -321,7 +321,7 @@ class LINE extends LineAPI {
             this.leftGroupByName(payload)
         }
 
-        if(cmd === 'ip') {
+        if(cmd === 'phetip') {
             exec(`curl ipinfo.io/${payload}`,(err, res) => {
                 const result = JSON.parse(res);
                 if(typeof result.error == 'undefined') {
