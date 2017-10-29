@@ -8,7 +8,7 @@ const auth = {
 // let client =  new LineConnect(auth);
 //let client =  new LineConnect();
 
-#client.().then(async (res) => {
+//client.().then(async (res) => {
 	
 	while(true) {
 		try {
