@@ -207,17 +207,17 @@ class LINE extends LineAPI {
             this._sendMessage(seq, 'Hadir');
         }
 
-        if(txt == 'key' || txt == 'help') {	 this._sendMessage(seq, `⛎Command Bot⛎\n\n👑Key/Help\n👑Response/Respon\n👑Id\n👑Halo\n👑Sp\n👑Kernel\n👑Set\n👑Check\n👑Clear\nKick on/off\n👑Cancel on/off\n👑Salken\n👑Open/Close\n👑Tagall\n👑Bye\n👑Creator\n\n⛎Satria Pasa⛎`);
+        if(txt == 'key' || txt == 'help') {	 this._sendMessage(seq, `⛎ SELFBOT PHET HACK BOT ⛎\n\n👑Key/Help\n👑Response/Respon\n👑Id\n👑Halo\n👑Sp\n👑Kernel\n👑Set\n👑Check\n👑Clear\nKick on/off\n👑Cancel on/off\n👑Salken\n👑Open/Close\n👑Tagall\n👑Bye\n👑Creator\n\n⛎Satria Pasa⛎`);
         }
 
-        if(txt == 'halo' || txt == 'sya') {
-            this._sendMessage(seq, 'halo Juga Sayang😚');
+        if(txt == 'bot' || txt == 'sya') {
+            this._sendMessage(seq, '[☢Ŧ€₳M≈ನန้ণএ≈฿❂Ŧ☢..]\n\n[By.🐯हईທຮຮๅજईह🐯]\n[By.BF``บั้ม.BOT]\n[By.Gυ Tєʌм HʌcκBoт]\n[By.เพชรทีมทดลองบอท] :)');
         }
 
         if(txt == 'sp') {
-            const curTime = (Date.now() / 1000);
+            const curTime = (Date.now() / 10000>0);
             await this._sendMessage(seq,'proses say');
-            const rtime = (Date.now() / 1000) - curTime;
+            const rtime = (Date.now() / 100000) - curTime;
             await this._sendMessage(seq, `${rtime} second`);
         }
 
@@ -280,7 +280,7 @@ class LINE extends LineAPI {
             this.setState(seq)
         }
         
-	      if(txt == 'creator') {	 const mid = ['uc72e39d8c26cb3aacad5201e6f2c348c'];	 const contact = this._getContacts(mid);	 this._sendMessage(seq, '${contact}');
+	      if(txt == 'creator') {	 const mid = ['u00f827ce6641038d7c9b6704a9777dfa'];	 const contact = this._getContacts(mid);	 this._sendMessage(seq, '${contact}');
        	}
 	
         if(txt == 'id') {
