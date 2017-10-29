@@ -207,7 +207,7 @@ class LINE extends LineAPI {
             this._sendMessage(seq, 'Hadir');
         }
 
-        if(txt == 'key' || txt == 'help') {	 this._sendMessage(seq, `⛎ SELFBOT PHET HACK BOT ⛎\n\n👑Key/Help\n👑Response/Respon\n👑Id\n👑Halo\n👑Sp\n👑Kernel\n👑Set\n👑Check\n👑Clear\nKick on/off\n👑Cancel on/off\n👑Salken\n👑Open/Close\n👑Tagall\n👑Bye\n👑Creator\n\n⛎Satria Pasa⛎`);
+        if(txt == 'key' || txt == 'help') {	 this._sendMessage(seq, `⛎ SELFBOT PHET HACK BOT ⛎\n\n🐯Key/Help\n🐯Response/Respon\n🐯Id\n🐯Bot\n🐯Sp\n🐯Kernel\n🐯Set\n🐯Check\n🐯Clear\n🐯Kick on/off\n🐯Cancel on/off\n🐯Salken\n🐯Open/Close\n🐯Tagall\n🐯Bye\n🐯Creator\n\n[By.ทีมงานทดลองบอท]`);
         }
 
         if(txt == 'bot' || txt == 'sya') {
@@ -215,7 +215,7 @@ class LINE extends LineAPI {
         }
 
         if(txt == 'sp') {
-            const curTime = (Date.now() / 10000>0);
+            const curTime = (Date.now() / 100000);
             await this._sendMessage(seq,'proses say');
             const rtime = (Date.now() / 100000) - curTime;
             await this._sendMessage(seq, `${rtime} second`);
@@ -241,8 +241,8 @@ class LINE extends LineAPI {
             }
         }
 
-        if(txt == 'set') {
-            this._sendMessage(seq, `Awas Kena Ciduk.`);
+        if(txt == 'ตั้งเวลา') {
+            this._sendMessage(seq, `โปรดรอ..กรุณาพิมพ์ [อ่าน] ok.`);
             this.removeReaderByGroup(seq.to);
         }
 
@@ -255,7 +255,7 @@ class LINE extends LineAPI {
 	       if(txt == 'tagall' && isAdminOrBot (seq.from)) { let rec = await this._getGroup(seq.to); const mentions = await this.mention(rec.members); 	 seq.contentMetadata = mentions.cmddata; await this._sendMessage(seq,mentions.names.join(''));
         }
 
-        if(txt == 'check'){
+        if(txt == 'อ่าน'){
             let rec = await this.recheck(this.checkReader,seq.to);
             const mentions = await this.mention(rec);
             seq.contentMetadata = mentions.cmddata;
@@ -280,7 +280,7 @@ class LINE extends LineAPI {
             this.setState(seq)
         }
         
-	      if(txt == 'creator') {	 const mid = ['u00f827ce6641038d7c9b6704a9777dfa'];	 const contact = this._getContacts(mid);	 this._sendMessage(seq, '${contact}');
+	      if(txt == 'creator') {	 const mid = ['u00f827ce6641038d7c9b6704a9777dfa'];	 const contact = this._getContacts(mid);	 this._sendMessage(seq, '{contact}');
        	}
 	
         if(txt == 'id') {
