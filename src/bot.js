@@ -7,6 +7,7 @@ const auth = {
 }
 // let client =  new LineConnect(auth);
 let client =  new LineConnect();
+let client =  new LineConnect();
 
 client.startx().then(async (res) => {
 	
